@@ -1,3 +1,4 @@
 {
-  "counter": 6
+  "counter": 8,
+  "anotherParam": "Hello"
 }
