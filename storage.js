@@ -1,5 +1,5 @@
-// Try me locally using: wt serve --storage-file counter.json counter.js
-
+// Try me locally using: wt serve --storage-file counter.json storage.js --hostname localhost --port 8080
+// make sure you have tomcat running
 module.exports = function(context, cb) {
     context.storage.get(function(error, data) {
         if (error) return cb(error);
