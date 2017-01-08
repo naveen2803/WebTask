@@ -1,5 +1,6 @@
 module.exports = function(context, cb) {
     var mysql = require('mysql@2.7.0');
+    var os = require('os');
     connect();
 
     function connect() {
@@ -18,7 +19,7 @@ module.exports = function(context, cb) {
                     throw err;
                 } else {
                     connection.end();
-                    cb(null, rows);
+                    cb(null, os.platform());
                 }
             }
         );
