@@ -1,3 +1,13 @@
+var wt = require('webtask-tools');
+
+function webtask(ctx, req, res) {
+    res.write({
+        hello: ctx.data.name || 'Anonymous'
+    });
+    res.end();
+};
+module.exports = wt.auth0(webtask);
+/*
 var app = new(require('express'))();
 var wt = require('webtask-tools');
 
@@ -24,3 +34,4 @@ module.exports = wt.fromExpress(app).auth0({
         res.end(JSON.stringify(RESPONSE.UNAUTHORIZED))
     }
 });
+*/
