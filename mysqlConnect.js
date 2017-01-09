@@ -4,10 +4,10 @@ module.exports = function(context, cb) {
 
     function connect() {
         var connection = mysql.createConnection({
-            host: '50.62.176.15',
-            user: 'pavamanauser',
-            password: 'Password@12345',
-            database: 'pavamana'
+            host: '',
+            user: '',
+            password: '',
+            database: ''
         });
 
         connection.connect();
